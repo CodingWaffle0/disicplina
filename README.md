@@ -10,6 +10,7 @@ A website that teaches C in an easy and fun way
 1. Sylizing the html files
 2. Giving ideas on how to structure different days
 3. Help organize the files in the git
+4. Making the html files themselves for all of the days
 
 ***
 Your help is wanted even if you a beginner, the more people we have working on this the better

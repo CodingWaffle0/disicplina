@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day 1</title>
+    </head>
+
+    <body>
+        <!--Basic overview of the day-->
+        <div>
+            <h1>Day 1</h1>
+            <p>
+                Today you will learn about printing data to the screen and the basic variable types
+            </p>
+        </div>
+        
+        <!--Describing how to use the stdio.h/printf to print data-->
+        <div>
+            <h1>Printing to the terminal with printf</h1>
+            <p>printf is a function in the stdio.h library which is like an extension for Chrome but for a C program</p>
+            
+            <!--What might the code look like and what are all of the different parts-->
+            <div>
+                <h2>What does it look like</h2>
+                
+                <!--The code itself-->
+                <p>printf("the text you want to display", arguments);</p>
+
+                
+                <!--What is it doing-->
+                <div>
+                    <h4>
+                        Let's first look at the printf(...) part of this statement
+                    </h4>
+                    <p>
+                        This lets the compiler that you want to use the printf function with the "..." arguments
+                    </p>
+                </div>
+
+                <!--What are the different arguments-->
+                <div>
+                    <h4>
+                        The first argument
+                    </h4>
+                    <p>
+                        The first argument is the text that is displayed which is surrounded by "" to show that this is a string more about that latter.
+                    </p>
+
+                    <h4>
+                        The other arguments
+                    </h4>
+                    <p>
+                        We'll talk about the other arguments when you have a better grasp of what C can do.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--What are the basic variable types-->
+        <div>
+            <h1>What are the types of variables that C offers</h1>
+            <p>There are two basic types that you will learn today integers and floating point numbers.</p>
+
+            <!--Integers-->
+            <div>
+                <!--Basic overview-->
+                <h2>Integers</h2>
+                <p>
+                    These types of variables can only hold integers as the name might suggest. The way that the number is stored is much like how you might represent a number in a decimal number system but computers can only store 1s and 0s so it's the number system is binary.
+                </p>
+
+                <!--Table of all of the types-->
+                <div>
+                    <h4>What are the different Integer types</h4>
+                    <table>
+                        <tr>
+                            <th>name</th>
+                            <th>Bits and bytes</th>
+                            <th>range</th>
+                            <th>other names</th>
+                        </tr>
+                        <tr>
+                            <td>signed char</td>
+                            <td>8-bits or a byte</td>
+                            <td>-128 to 127</td>
+                            <td>char depending on systems</td>
+                        </tr>
+                        <tr>
+                            <td>unsigned char</td>
+                            <td>8-bits or a byte</td>
+                            <td>0 to 255</td>
+                            <td>char depending on systems</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>16-bits or 2-bytes</td>
+                            <td>-32,768 to 32,767</td>
+                            <td>short int signed short int or signed short</td>
+                        </tr>
+                        <tr>
+                            <td>unsigned short</td>
+                            <td>16-bits or 2-bytes</td>
+                            <td>0 to 65,535</td>
+                            <td>unsigned short int</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>32-bits or 4-bytes</td>
+                            <td>-2,147,483,648 to 2,147,483,647</td>
+                            <td>signed int and signed</td>
+                        </tr>
+                        <tr>
+                            <td>unsinged int</td>
+                            <td>32-bits or 4-bytes</td>
+                            <td>0 to 4,294,967,295</td>
+                            <td>unsigned</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>64-bits or 8-bytes</td>
+                            <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                            <td>signed long, long int, or signed long int</td>
+                        </tr>
+                        <tr>
+                            <td>unsigned long</td>
+                            <td>64-bits or 8-bytes</td>
+                            <td>0 to 18,446,744,073,709,551,615</td>
+                            <td>unsigned long and unsigned long int</td>
+                        </tr>
+                    </table>
+                    <p>
+                        After looking at the table above you might have realized something that there are 4 different main names char, short, int, and long. Then the signed (the ones with no prefix) and unsigned prefixes modify the range of the numbers that can be stored in the types.
+                    </p>
+                </div>
+            </div>
+
+            <!--Real numbers-->
+            <div>
+                <!--Basic Overview-->
+                <h2>Real number</h2>
+                <p>
+                    Used when you want to have a decimal point in the number meaning it's a real number.
+                </p>
+
+                <!--Table of the types-->
+                <div>
+                    <h4>What are the types</h4>
+                    
+                    <table>
+                        <tr>
+                            <th>name</td>
+                            <th>Bits and bytes</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>32-bits or 4-bytes</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>64-bits or 8-bytes</td>
+                        </tr>
+                        <tr>
+                            <td>long double</td>
+                            <td>same as the double or as large as 10-16 bytes</td>
+                        </tr>
+                    </table>
+
+                    <p>The table above doesn't have signed and unsigned types that's because they aren't offered. Also that there float, double, and long double like there were short, int, and long for the integer types</p>
+                </div>
+
+                <!--Things to watch out for with comparing Real numbers-->
+                <!--TODO: I don't know much about this so if I could get some conformation that would be great-->
+                <div>
+                    <h4>Things to watch out for</h4>
+                    <p>Because there is a finite amount of bits that the float, double, and long double types store the number isn't always fully precise, this means you should avoid using the "==" operator since it might look like the numbers are the same they might be a different of .00001 that the number picks up on</p>
+                </div>
+
+                <!--TODO: Describe how floating point numbers are structured-->
+            </div>
+
+            <!--initialization of variables-->
+			<!--TODO: Give more information about how to declare variables-->
+            <div>
+                <h1>How might you use the variable types to make variables</h1>
+
+                <!--The code and breaking it down-->
+                <div>
+                    <p>type name = constant;</p>
+                    <br>
+                    <p>The type is the variable type, the name is the variables name, and the constant is the value you want to assign to it in the first place.</p>
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <!--How to print variables-->
+        <div>
+            <h1>How to print variables</h1>
+            <p>We will use printf again to print the variable</p>
+
+            <!--The code and discriping the %d specifier-->
+            <div>
+                <h4>What it might look like</h4>
+                <p>//... <br>int x = 10; <br>printf("x is equal to %d", x);<br>//...</p>
+
+                <p>If you looked at it you might see that there is a weird simple "%d", this means that the first argument after print text is a int and the value should be printed. If the "%d" was the second Specifier then the variable that should be printed should be the second after the print text.</p>
+            </div>
+
+            <!--Table of all the specifiers-->
+            <div>
+                <h4>Other specifiers</h4>
+                
+                <table>
+                    <tr>
+                        <th>Specifier</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>%d or %i</td>
+                        <td>Print the integer as a positive decimal number (base 10)</td>
+                    </tr>
+                    <!--TODO: Add all of the other specifiers to the table-->
+                </table>
+            </div>
+        </div>
+
+        <!--All of the resources that were used in creating this-->
+        <div>
+            <h1>Were I got the information</h1>
+            <a href="https://www.w3resource.com/c-programming/c-printf-statement.php">Printf Resoress, w3resource</a>
+            <br>
+            <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html">GNU C Reference Manual</a>
+        </div>
+    </body>
+</html>

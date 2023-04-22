@@ -2,28 +2,41 @@
 <html lang="en">
     <head>
         <title>Day 1</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
     </head>
 
     <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.highlightAll();</script>
+
+
         <!--Basic overview of the day-->
-        <div>
+        <div class = "section">
             <h1>Day 1</h1>
-            <p>
+            <p class = "overview">
                 Today you will learn about printing data to the screen and the basic variable types
             </p>
         </div>
         
         <!--Describing how to use the stdio.h/printf to print data-->
-        <div>
+        <div class = "section">
             <h1>Printing to the terminal with printf</h1>
-            <p>printf is a function in the stdio.h library which is like an extension for Chrome but for a C program</p>
+            <p class = "overview">printf is a function in the stdio.h library which is like an extension for Chrome but for a C program</p>
             
             <!--What might the code look like and what are all of the different parts-->
             <div>
-                <h2>What does it look like</h2>
+                <h4>What does it look like</h4>
                 
                 <!--The code itself-->
-                <p>printf("the text you want to display", arguments);</p>
+                <pre>
+                    <code class="language-c">
+                        int main(){
+                            printf("the text you want to display", arguments);
+                        }
+                    </code>
+                </pre>
 
                 
                 <!--What is it doing-->
@@ -56,9 +69,9 @@
         </div>
 
         <!--What are the basic variable types-->
-        <div>
+        <div class = "section">
             <h1>What are the types of variables that C offers</h1>
-            <p>There are two basic types that you will learn today integers and floating point numbers.</p>
+            <p class = "overview">There are two basic types that you will learn today integers and floating point numbers.</p>
 
             <!--Integers-->
             <div>
@@ -180,7 +193,7 @@
             <!--initialization of variables-->
 			<!--TODO: Give more information about how to declare variables-->
             <div>
-                <h1>How might you use the variable types to make variables</h1>
+                <h2>How might you use the variable types to make variables</h2>
 
                 <!--The code and breaking it down-->
                 <div>
@@ -194,14 +207,22 @@
         </div>
         
         <!--How to print variables-->
-        <div>
-            <h1>How to print variables</h1>
+        <div class = "section">
+            <h1 class = "overview">How to print variables</h1>
             <p>We will use printf again to print the variable</p>
 
             <!--The code and discriping the %d specifier-->
             <div>
                 <h4>What it might look like</h4>
-                <p>//... <br>int x = 10; <br>printf("x is equal to %d", x);<br>//...</p>
+
+                <pre>
+                    <code class = "language-c">
+                        //..
+                        int x = 10;
+                        printf("x is equal to %d", x);
+                        //...
+                    </code>
+                </pre>
 
                 <p>If you looked at it you might see that there is a weird simple "%d", this means that the first argument after print text is a int and the value should be printed. If the "%d" was the second Specifier then the variable that should be printed should be the second after the print text.</p>
             </div>
@@ -225,8 +246,8 @@
         </div>
 
         <!--All of the resources that were used in creating this-->
-        <div>
-            <h1>Were I got the information</h1>
+        <div class = "section">
+            <h1 class = "overview">Were I got the information</h1>
             <a href="https://www.w3resource.com/c-programming/c-printf-statement.php">Printf Resoress, w3resource</a>
             <br>
             <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html">GNU C Reference Manual</a>

@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <title>Day 1</title>
-        <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
@@ -23,7 +23,7 @@
         <!--Describing how to use the stdio.h/printf to print data-->
         <div class = "section">
             <h1>Printing to the terminal with printf</h1>
-            <p class = "overview">printf is a function in the stdio.h library which is like an extension for Chrome but for a C program</p>
+            <p class = "overview">printf is a function in the stdio.h library which is like an extension for Chrome but for a C programs</p>
             
             <!--What might the code look like and what are all of the different parts-->
             <div>
@@ -32,9 +32,9 @@
                 <!--The code itself-->
                 <pre>
                     <code class="language-c">
-                        int main(){
-                            printf("the text you want to display", arguments);
-                        }
+int main()
+    printf("the text you want to display", arguments);
+}
                     </code>
                 </pre>
 
@@ -197,7 +197,11 @@
 
                 <!--The code and breaking it down-->
                 <div>
-                    <p>type name = constant;</p>
+                    <pre>
+                        <code class = "language-c">
+type name = constant;
+                        </code>
+                    </pre>
                     <br>
                     <p>The type is the variable type, the name is the variables name, and the constant is the value you want to assign to it in the first place.</p>
                 </div>
@@ -208,8 +212,8 @@
         
         <!--How to print variables-->
         <div class = "section">
-            <h1 class = "overview">How to print variables</h1>
-            <p>We will use printf again to print the variable</p>
+            <h1>How to print variables</h1>
+            <p class="overview">We will use printf again to print the variable</p>
 
             <!--The code and discriping the %d specifier-->
             <div>
@@ -217,10 +221,10 @@
 
                 <pre>
                     <code class = "language-c">
-                        //..
-                        int x = 10;
-                        printf("x is equal to %d", x);
-                        //...
+//..
+int x = 10;
+printf("x is equal to %d", x);
+//...
                     </code>
                 </pre>
 
@@ -247,7 +251,7 @@
 
         <!--All of the resources that were used in creating this-->
         <div class = "section">
-            <h1 class = "overview">Were I got the information</h1>
+            <h1>Were I got the information</h1>
             <a href="https://www.w3resource.com/c-programming/c-printf-statement.php">Printf Resoress, w3resource</a>
             <br>
             <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html">GNU C Reference Manual</a>

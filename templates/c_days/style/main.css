@@ -20,7 +20,7 @@ body {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 1.2rem;
-  color: rgb(169, 156, 156);
+  color: #a99c9c;
   overflow-x: auto;
   white-space: pre-wrap;
 }
@@ -41,7 +41,7 @@ body {
   color: #e06c75;
 }
 .section pre code .operator {
-  color: rgb(22, 38, 161);
+  color: #1626a1;
   background-color: transparent;
 }
 

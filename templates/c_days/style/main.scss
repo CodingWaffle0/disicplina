@@ -1,9 +1,11 @@
-// Define some variables for color
+// Define some variables for colors
 $primary-color: #52d36a;
 $secondary-color: #adb5bd;
 $heading-color: #c9d1d9;
 $border-color: #6c757d;
 $table-cell-bg-color: #444c56;
+$font-size: 14px;
+$variable-color: #a99c9c;
 
 // Define a mixin for media queries
 @mixin tablet {
@@ -20,10 +22,6 @@ body {
 	background-color: #1f2428;
 }
 
-// Define a variable for the font size
-$font-size: 14px;
-$variable-color: rgb(169, 156, 156);
-
 .section pre {
 	overflow-x: auto;
 	font-size: $font-size;
@@ -34,7 +32,6 @@ $variable-color: rgb(169, 156, 156);
 	background-color: rgba(0, 0, 0, 0.2);
 	display: inline-block;
 	max-width: 100%;
-	
 
 	code {
 		font-family: "Fira Code", monospace;
@@ -43,7 +40,6 @@ $variable-color: rgb(169, 156, 156);
 		color: $variable-color;
 		overflow-x: auto;
 		white-space: pre-wrap;
-		
 
 		// Define styles for the code syntax highlighting
 		.keyword {
@@ -67,10 +63,10 @@ $variable-color: rgb(169, 156, 156);
 			color: #e06c75;
 		}
 
-		.operator{
-			color: rgb(22, 38, 161);
+		.operator {
+			color: #1626a1;
 			background-color: transparent;
-		  }
+		}
 	}
 }
 
@@ -84,7 +80,7 @@ $section-bg-color-2: #444c56;
 	padding: 50px;
 	border-radius: 10px;
 	margin-bottom: 50px;
-	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 	text-align: center;
 
 	// Change the background color for every other section
@@ -115,13 +111,13 @@ p {
 
 .overview {
 	text-align: left;
-	color: #c9d1d9;
+	color: $heading-color;
 }
 
 table {
 	border-collapse: separate;
 	border-spacing: 0;
-	background-color: #2d333b;
+	background-color: $section-bg-color-1;
 	border-radius: 10px;
 	overflow: hidden;
 	text-align: center;
@@ -129,7 +125,7 @@ table {
 
 	// Define styles for the table header row
 	th {
-		background-color: #52d36a;
+		background-color: $primary-color;
 		color: #fff;
 		font-weight: bold;
 		padding: 10px;

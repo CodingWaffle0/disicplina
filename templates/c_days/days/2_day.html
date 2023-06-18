@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day 2</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+        <link rel="stylesheet" href="../style/main.css">
+    </head>
+
+    <body>
+		<!--Scripts for code highlighting-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>Prism.highlightAll();</script>
+
+		<!--Basic overview of the day-->
+        <div class = "Head">
+            <h1>Day 2</h1>
+            <p class = "overview">
+                Today you will learn about getting data from the user, basic operands, and conditionals
+            </p>
+
+            <h2>background</h2>
+            <div class = "background">
+                <p>There are a couple of things you should know:</p>
+                
+                <ul>
+                    <li>That when I say string you can think of a bunch of character/words or a string of character/words</li>
+                    <li>We are going to be using the cs50 libary that is not avarible of windows users</li>
+                    <li>If you are taking the cs50x cource you don't have to be worried about installing the cs50 libary because it is already installed for you</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Installing CS50-->
+        <div class = "section">
+            <h1>Installing the CS50 Library</h1>
+            <p class = "overview">
+                The cs50 library is a userful library when getting user input, but saddly it's not preinstalled with GCC like stdio is. we will be following this <a href="https://cs50.readthedocs.io/libraries/cs50/c/#makefile">installation guide</a>
+            </p>
+
+            <!--Steps to Install the CS50 Library-->
+            <div>
+                <h4>How to Install the CS50 Library</h4>
+                <p>
+                    First you go to the <a href="https://github.com/cs50/libcs50/releases">cs50 releases</a>. Then download the latest source code in zip. Open up your file manager add go to your Downloads folder then shearch for libcs50, unpack that. After unpaking the zip file you should see a folder you should open that folder in the terminal. After that is done execute this code:    
+                </p>
+
+                <pre>
+                    <code class = "language-shell">
+sudo make install
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h1>Getting Integers from the User</h1>
+            <p class = "overview">We will be using the cs50 library that we just installed to do this, most inportantly the get_int() function</p>
+
+            <div>
+                <h4>What it looks like</h4>
+                <pre>
+                    <code class = "language-c">
+get_int("string you what to specify the input");
+                    </code>
+                </pre>
+            </div>
+
+            <div>
+                <h4>Return values</h4>
+                <p>This function only returns an int that the user gave</p>
+            </div>
+
+            <div>
+                <h4>How it might be used</h4>
+                <p>for example it might be used to get a number between 1 and 10</p>
+                <pre>
+                    <code class = "language-c">
+// including stdio and cs50 libraries so that the program has access to them
+#include &lt;stdio.h&gt;
+#include &lt;cs50.h&gt;
+
+// This is the first function that runs
+int main(void){
+    // the integer variable number is assigned the value of 0 (place holder)
+    int number = 0;
+
+    // Then the fancy do while loop loops untill the while condition is met
+    do{
+        // Gets an int from the user
+        number = get_int("give me a number between 1 and 10 inclusive: ");
+    }
+    while (number < 1 || number > 10);
+
+    // Prints the number provided by the user
+    printf("your number was %i\n", number);
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class = "section">
+            <h1>Getting Strings</h1>
+            <p class= "overview">Like getting ints we will use the cs50 libary but this time the get_string function</p>
+
+            <div>
+                <h4>What it looks like</h4>
+                <pre>
+                    <code class = "language-c">
+get_string("string you what to specify the input");
+                    </code>
+                </pre>
+            </div>
+
+            <div>
+                <h4>Retrun values</h4>
+                <p>It returns a string, well thats a lie it really returns a char* but more on that in a couple of days</p>
+            </div>
+        
+
+            <div>
+                <h4>How it might be used</h4>
+                <p>It will be used in the same since as with get_int but this time it will return a string</p>
+                <pre>
+                    <code class = "language-c">
+string name = get_string("what is your name?: ");
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+	</body>
+</html>

@@ -20,9 +20,9 @@ body {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 1.2rem;
-  color: #a99c9c;
   overflow-x: auto;
   white-space: pre-wrap;
+  color: #a99c9c;
 }
 .section pre code .keyword {
   color: #c678dd;
@@ -34,7 +34,7 @@ body {
   color: #d19a66;
 }
 .section pre code .comment {
-  color: #6a9955;
+  color: rgba(78, 78, 78, 0.7294117647);
   font-style: italic;
 }
 .section pre code .type {
@@ -61,7 +61,6 @@ h1 {
   font-size: 36px;
   font-weight: bold;
   color: #c9d1d9;
-  text-transform: uppercase;
   letter-spacing: 2px;
   text-align: left;
   margin: 50px auto;
@@ -111,4 +110,4 @@ a:hover {
   color: yellow;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=main.css.map */

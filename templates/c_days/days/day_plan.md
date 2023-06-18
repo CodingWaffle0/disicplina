@@ -1,3 +1,4 @@
+## Day 1
 Basic datatypes and printing things to the terminal ("Hello World" and variables)
 
 ## Day 2
